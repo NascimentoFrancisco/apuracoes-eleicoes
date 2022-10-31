@@ -1,0 +1,88 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Apurações</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar-top-fixed.css' %}">
+
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+          
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    {% block container %}
+      <h2>Apurações</h2>
+      <br>
+      <table class="table table-dark">
+          <thead>
+              <tr>
+                  <th>
+                      Candidato
+                  </th>
+                  <th>
+                      Votos
+                  </th>
+                  <th>
+                      Porcentagem
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for resultado in object_list %}
+              <tr>
+                  <td>
+                      {{ resultado.candidato }}
+                  </td>
+                  <td>
+                      {{ resultado.votos}}
+                  </td>
+                  <td>
+                      {{ resultado.porcentagem}}%
+                  </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+    {% endblock %}
+    
+  </div>
+</main>
+
+
+    <script rel="stylesheet" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+      
+  </body>
+</html>
