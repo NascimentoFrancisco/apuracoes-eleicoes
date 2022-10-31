@@ -1,6 +1,6 @@
 # Descrição
 
-Esse projeto exibe o resultdao das apurações elitorais ocorridas no segundo turno. 
+Esse projeto exibe de modo geral as apurações eleitorais ocorridas no segundo turno. 
 
 ## Instruções
 
